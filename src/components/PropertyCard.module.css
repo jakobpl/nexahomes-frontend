@@ -1,0 +1,153 @@
+/* 
+##003366 -> primary bluee
+#00b37e -> accent greene
+#6699cc -> light bluee
+#a2a2a2
+#fff
+#2b2b2b
+*/
+
+.property_card {
+  height: 100%;
+  width: 100%;
+  background-color: #284b63;
+  box-shadow: 2px 8px 20px 10px #2b2b2b10;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  color: #fff;
+}
+.property_img_container {
+  z-index: 10;
+  position: relative;
+  height: 75%;
+  overflow: hidden;
+}
+.property_status,
+.property_price {
+  background-color: #3c6e71;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.6rem;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.property_status {
+  top: 0;
+  left: 0;
+}
+.property_price {
+  bottom: 0;
+  right: 0;
+}
+
+.property_info {
+  padding-left: 1rem;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.property_address {
+  font-size: 2rem;
+}
+.property_amenities {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+}
+.property_amenities ion-icon {
+  height: 2rem;
+  width: 2rem;
+}
+.property_amenities_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.item_divider {
+  width: 1px;
+  height: 2rem;
+  background-color: #3c6e71;
+}
+
+.item_count {
+  font-size: 2rem;
+}
+
+.property_card:hover {
+  box-shadow: 2px 8px 20px 10px #00000030;
+}
+.property_img_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property_img {
+  /* position: absolute;
+  top: 0; */
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+/* .property_img_container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/img1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.property_card:hover .property_img_container::before {
+  transform: scale(1.1);
+} */
+
+.property_card:hover .property_status,
+.property_card:hover .property_price {
+  opacity: 1;
+}
+@media (min-width: 48em) {
+  .property_card:hover .property_img {
+    transform: scale(1.1);
+  }
+  .property_img {
+    transition: all 0.5s ease;
+  }
+}
+@media (max-width: 48em) {
+  .property_price,
+  .property_status {
+    opacity: 1;
+  }
+  .property_card {
+    box-shadow: 2px 8px 20px 10px #00000030;
+  }
+  .property_card:hover .property_img_container::before {
+    transform: scale(1); /* Scale the background */
+  }
+  .property_img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 37em) {
+  .property_img {
+    height: 100%;
+    width: auto;
+  }
+}

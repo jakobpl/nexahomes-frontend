@@ -1,0 +1,151 @@
+/* 
+##003366 -> primary bluee
+#00b37e -> accent greene
+#6699cc -> light bluee
+#a2a2a2
+#fff
+#2b2b2b */
+
+.bottom_divider {
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 4rem);
+  background-color: white;
+  bottom: 0;
+  left: 2rem;
+}
+.footer_container,
+.newsletter,
+.newsletter_form,
+.newsletter_text,
+.footer_ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer_container {
+  background-color: #353535;
+  /* background-color: #d9d9d9; */
+  color: white;
+}
+
+/* newsletter */
+.newsletter {
+  /* background-color: #00b37e; */
+  /* background-color: #284b63; */
+  background-color: #d9d9d9;
+  padding: 4rem 0;
+}
+.newsletter,
+.newsletter_text,
+.newsletter_form,
+.footer_container {
+  align-items: center;
+}
+
+.newsletter {
+  gap: 4rem;
+  width: 100%;
+}
+.newsletter_title {
+  color: #284b63;
+}
+.newsletter_text,
+.newsletter_form {
+  gap: 1.2rem;
+  color: #353535;
+}
+.newsletter_text {
+  text-align: center;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.footer_input {
+  background-color: #fff;
+  border: solid 1px white;
+  height: 3rem;
+  width: 40rem;
+  padding: 0 1rem;
+  color: #353535;
+}
+.footer_input::placeholder {
+  text-align: center;
+  color: #a2a2a2;
+}
+.footer_input:focus {
+  border: none;
+  outline: none;
+}
+.btn_newsletter {
+  background-color: #3c6e71;
+  color: #fff;
+  /* background-color: #b3e8d8; */
+  /* color: #2b2b2b; */
+  border: solid 1px transparent;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* .btn_newsletter:hover {
+  background-color: #6699cc;
+  color: #fff;
+  border: solid 1px #6699cc;
+} */
+
+/* footer */
+.footer {
+  position: relative;
+  max-width: 120rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  padding: 4rem 2rem;
+}
+.footer_ul {
+  gap: 1rem;
+  flex-wrap: wrap;
+  height: 12rem;
+}
+/* this should be in footer but i will fix this later */
+.external_links {
+  max-width: 120rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.external_links_ul ion-icon {
+  height: 3rem;
+  width: 3rem;
+}
+.external_links_ul {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 36em) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer_ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  .external_links {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer_input {
+    width: 30rem;
+  }
+}
+@media (max-width: 36em) {
+  input {
+    width: 30rem;
+  }
+}
